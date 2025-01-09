@@ -12,6 +12,13 @@ Setup origin certificates for the domain you intend to use, and enable the "Auth
 
 The directory `certs` is mapped to `/certs` when the container is stood up.
 
+If you want to use more than 1 domain, add an additional entry under `certificates`: 
+
+```
+    - certFile: /certs/netcrave.chat.crt
+      keyFile: /certs/netcrave.chat.key
+```
+
 # Adding a backend to Traefik
 In your application's `docker-compose.yml` add the top level network element:
 ```
