@@ -1,6 +1,6 @@
 # Quickstart
 Read more about origin certificates in Cloudflare's documentation: https://developers.cloudflare.com/ssl/origin-configuration/origin-ca/
-Setup origin certificates for the domain you intend to use, and enable the "Authenticated Origin Pulls" option. 
+Setup origin certificates for the domain you intend to use, and enable the "Authenticated Origin Pulls" option in the Cloudflare dashboard. 
 
 `certificates.yaml` contains the configuration specifying the names of the origin certificates:
 
