@@ -43,6 +43,8 @@ add the following labels to the container configuration:
 - replace `myservice` everywhere with the container name of the application
 - change `myservice.netcrave.chat` to the domain that you want to use for the application 
 - change `traefik.http.services.myservice.loadbalancer.server.port=3000` to the correct port for the application
-  
+
+When the application is stood up, Traefik will automatically configure it's routes to work with it.
+
 # TODO 
 - https://github.com/traefik/traefik/issues/11424
