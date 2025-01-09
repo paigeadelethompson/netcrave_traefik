@@ -1,5 +1,7 @@
 # Quickstart
-`certificates.yaml` contains the configuration specifying the names of the [https://developers.cloudflare.com/ssl/origin-configuration/origin-ca/](origin certificates) issued by CloudFlare:
+Read more about origin certificates in Cloudflare's documentation: https://developers.cloudflare.com/ssl/origin-configuration/origin-ca/
+
+`certificates.yaml` contains the configuration specifying the names of the origin certificates:
 
 ```
   certificates:
