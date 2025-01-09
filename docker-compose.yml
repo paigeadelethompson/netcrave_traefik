@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+  traefik:
+    image: traefik:3.3.1
+    env_file:
+      - ./config.env
+    command:
+      - --accesslog=${ACCESS_LOG}
+      - --log.level=${LOG_LEVEL}
+      - --api.insecure=false
+      - --providers.docker
+      - --providers.file.directory=/etc/traefik/dynamic
+      - --entryPoints.web.address=:80
+      - --entryPoints.websecure.address=:443
+    networks:
+      - live
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./certificates.yaml:/etc/traefik/dynamic/certificates.yaml:ro
+      - ./certs:/certs:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+networks:
+  live:
+    ipam:
+      driver: default
+      config:
+        - subnet: 198.18.0.0/15
+          ip_range: 198.18.0.0/15
+          gateway: 198.19.255.254

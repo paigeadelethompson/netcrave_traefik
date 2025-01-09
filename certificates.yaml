@@ -1,0 +1,16 @@
+tls:
+  options:
+    default:
+      sniStrict: true
+      clientAuth:
+        caFiles:
+          - /certs/origin_ca_ecc_root.crt
+          - /certs/origin_ca_rsa_root.crt
+        clientAuthType: RequireAnyClientCert # RequireAndVerifyClientCert https://github.com/traefik/traefik/issues/11424
+  certificates:
+    - certFile: /certs/netcrave.network.crt
+      keyFile: /certs/netcrave.network.key
+    - certFile: /certs/netcrave.chat.crt
+      keyFile: /certs/netcrave.chat.key
+    - certFile: /certs/netcrave.io.crt
+      keyFile: /certs/netcrave.io.key
