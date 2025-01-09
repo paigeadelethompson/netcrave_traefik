@@ -47,5 +47,9 @@ add the following labels to the container configuration:
 
 When the application is stood up, Traefik will automatically configure it's routes to work with it.
 
+# Troubleshooting
+- Edit `config.env` and set `LOG_LEVEL` to `debug`
+- Optionally, set `ACCESS_LOG` to `true` for request logging
+
 # TODO 
 - https://github.com/traefik/traefik/issues/11424
